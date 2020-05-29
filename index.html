@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Josephus Problem</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+  <header>
+    <h1>The Josephus Problem</h1>
+  </header>
+  <div class="container">
+    <div>
+      <h2>
+        In computer science and mathematics, the Josephus problem (or Josephus
+        permutation) is a theoretical problem related to a certain counting-out
+        game.
+      </h2>
+      <p>
+        People are standing in a circle waiting to be executed. Counting begins
+        at a specified point in the circle and proceeds around the circle in a
+        specified direction. After a specified number of people are skipped, 
+        the next person is executed. The procedure is repeated with the 
+        remaining people, starting with the next person, going in the same 
+        direction and skipping the same number of people, until only one person 
+        remains, and is freed. 
+      </p>
+    </div>
+    <div class="problem" id="problem">
+      <label for="people">Number of people:</label> </br>
+      <input type="number"name="people" min="1" id="people" required>
+      <button onclick="">Submit</button>
+    </div>
+  </div>
+</body>
+</html>
