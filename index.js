@@ -43,13 +43,33 @@ const container = document.getElementById('problem');
 const button = document.getElementById('submit-button');
 
 function handleSubmit() {
-  let result = document.createElement("p");
 
-  result.innerHTML(`The last survivor is the number ${getWinner(input.value)}`);
   
-  problem.appendChild(result);
+  let lastResult = document.querySelector(".result");
+  let lastWarning = document.querySelector(".warning");
+  
+  lastResult ? container.removeChild(lastResult) : null;
+  lastWarning ? container.removeChild(lastWarning) : null; 
 
-  console.log('a');
+  if(input.value < 1) {
+    let warning = document.createElement("p");
+    warning.classList.add("warning")
+
+    let text = document.createTextNode("Please select a value that is no less than 1.");
+    
+    warning.appendChild(text);
+    container.appendChild(warning);
+
+    return;
+  }
+
+  let result = document.createElement("p");
+  result.classList.add("result")
+
+  let text = document.createTextNode(`The last survivor is the number ${getWinner(input.value)}`);
+  
+  result.appendChild(text);
+  container.appendChild(result);
 }
 
 button.addEventListener('click', handleSubmit);
