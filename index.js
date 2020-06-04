@@ -43,8 +43,6 @@ const container = document.getElementById('problem');
 const button = document.getElementById('submit-button');
 
 function handleSubmit() {
-
-  
   let lastResult = document.querySelector(".result");
   let lastWarning = document.querySelector(".warning");
   
